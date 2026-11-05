@@ -14,7 +14,7 @@ This repository contains reusable finance procedures. Each topic lives in one ro
 
 | Area | Skills |
 | --- | --- |
-| Financial reporting | `financial-analysis`, `statement-preparation`, `budget-forecast`, `hkfrs-18` |
+| Financial reporting | `financial-analysis`, `statement-preparation`, `budget-forecast`, `hkfrs-18`, `monthly-report-review` |
 | Accounting operations | `journal-entry`, `automated-reconciliation`, `close-management`, `inventory-costing`, `fixed-asset-accounting`, `corporate-consolidation`, `revenue-recognition`, `lease-accounting`, `ecl-computation` |
 | Hong Kong tax | `profits-tax`, `salaries-tax`, `deferred-tax`, `tax-planning` |
 | Audit and risk | `internal-audit`, `audit-checklist`, `risk-assessment` |

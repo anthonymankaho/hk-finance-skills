@@ -4,6 +4,7 @@ import path from 'node:path';
 // The names below are an allowlist of directories in this repository. The
 // question is used only for topic selection; it can never become a file path.
 const ROUTES = [
+  ['monthly-report-review', /(?:review.{0,40}(?:whole|entire|full|complete).{0,30}(?:report|workbook|file)|(?:whole|entire|full|complete).{0,30}(?:report|workbook|file).{0,30}review|monthly.{0,20}report.{0,25}review|report.{0,25}(?:html|build).{0,25}review|\u8986\u6838.{0,8}\u6574\u4efd(?:\u5831\u544a|\u6708\u5831)|\u6aa2\u67e5.{0,8}\u6574\u4efd(?:\u5831\u544a|\u6708\u5831)|\u6574\u4efd\u5831\u544a|\u5168\u4efd\u5831\u544a|\u5831\u544a\u8986\u6838|\u6708\u5831\u8986\u6838|\u5168\u5831\u8868\u6aa2\u67e5)/i],
   ['hkfrs-18', /(?:hkfrs|ifrs)\s*[- ]?18\b|財務報表(?:列報|呈列).*披露/i],
   ['automated-reconciliation', /reconcil|bank rec|intercompany match|對帳|銀行調節|往來核對/i],
   ['close-management', /month[ -]?end|period[ -]?end|year[ -]?end|close checklist|closing process|月結|年結|結帳流程/i],
