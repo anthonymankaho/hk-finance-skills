@@ -2,7 +2,7 @@
 name: hk-finance-skills
 description: Hong Kong finance and accounting procedures for AI assistants, covering HKFRS/HKAS, tax, audit, close, reconciliation, and analysis.
 metadata:
-  version: 1.2.0
+  version: 1.3.0
   jurisdiction: Hong Kong
 ---
 
@@ -15,6 +15,7 @@ This repository contains reusable finance procedures. Each topic lives in one ro
 | Area | Skills |
 | --- | --- |
 | Assistant behavior | `qwen-chat-assistant` |
+| Learning | `general-learning` |
 | Financial reporting | `financial-analysis`, `statement-preparation`, `budget-forecast`, `hkfrs-18`, `monthly-report-review` |
 | Accounting operations | `journal-entry`, `automated-reconciliation`, `close-management`, `inventory-costing`, `fixed-asset-accounting`, `corporate-consolidation`, `revenue-recognition`, `lease-accounting`, `ecl-computation` |
 | Hong Kong tax | `profits-tax`, `salaries-tax`, `deferred-tax`, `tax-planning` |
