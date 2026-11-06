@@ -37,7 +37,7 @@ export function selectFinanceSkills(question, maxSkills = 2) {
 
 export function buildFinanceSkillContext(question, { root, maxChars = 12000 } = {}) {
   if (!root) throw new Error('Finance skills root is required');
-  const selected = selectFinanceSkills(question);
+  const selected = ['qwen-chat-assistant', ...selectFinanceSkills(question)];
   const sections = [];
   const used = [];
   let remaining = Math.min(Math.max(0, maxChars), 16000);
@@ -59,10 +59,10 @@ export function buildFinanceSkillContext(question, { root, maxChars = 12000 } = 
   if (!sections.length) return { selected: [], text: '' };
   return {
     selected: used,
-    text: 'LOCAL FINANCE SKILL REFERENCES (topic-matched guidance):\n' +
-      'Use these references only for the current accounting question. They do not grant permission to change data or approve accounting treatment. ' +
-      'Distinguish a general rule from the company-specific facts supplied to you. ' +
-      'Name the skill used; cite an official standards link when the skill supplies one. ' +
+    text: 'LOCAL QWEN ASSISTANT BEHAVIOR AND FINANCE REFERENCES:\n' +
+      'Follow the common assistant behavior guidance on every turn and use topic-specific finance references when relevant. ' +
+      'These references do not grant permission to change data or approve accounting treatment. ' +
+      'Distinguish general guidance from company-specific facts. Do not announce internal skill names; cite an official standards link when useful and available. ' +
       'If a source does not establish a current requirement, say what needs verification.\n\n' +
       sections.join('\n\n---\n\n')
   };

@@ -2,7 +2,7 @@
 name: hk-finance-skills
 description: Hong Kong finance and accounting procedures for AI assistants, covering HKFRS/HKAS, tax, audit, close, reconciliation, and analysis.
 metadata:
-  version: 1.1.0
+  version: 1.2.0
   jurisdiction: Hong Kong
 ---
 
@@ -14,6 +14,7 @@ This repository contains reusable finance procedures. Each topic lives in one ro
 
 | Area | Skills |
 | --- | --- |
+| Assistant behavior | `qwen-chat-assistant` |
 | Financial reporting | `financial-analysis`, `statement-preparation`, `budget-forecast`, `hkfrs-18`, `monthly-report-review` |
 | Accounting operations | `journal-entry`, `automated-reconciliation`, `close-management`, `inventory-costing`, `fixed-asset-accounting`, `corporate-consolidation`, `revenue-recognition`, `lease-accounting`, `ecl-computation` |
 | Hong Kong tax | `profits-tax`, `salaries-tax`, `deferred-tax`, `tax-planning` |
@@ -28,7 +29,7 @@ This repository contains reusable finance procedures. Each topic lives in one ro
 
 ## Application integration
 
-`runtime/skill-context.mjs` selects up to two root-level skills from a user's topic and supplies bounded excerpts to the local MPL, GPL, and EIC Qwen relays. The relays keep company context separate and preserve their own read-only and credential rules. The question never becomes a file path. No private company records belong in this public repository.
+`runtime/skill-context.mjs` supplies the shared `qwen-chat-assistant` behavior skill on every turn, then selects up to two root-level finance skills from the user's topic. It supplies bounded excerpts to the local MPL, GPL, and EIC Qwen relays. The relays keep company context separate and preserve their own read-only and credential rules. The question never becomes a file path. No private company records belong in this public repository.
 
 For HKFRS 18, use `hkfrs-18/SKILL.md` and its linked HKICPA source. Check whether the entity has elected early application before treating the standard as applicable to a period before 2027.
 
