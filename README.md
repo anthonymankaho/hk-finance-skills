@@ -18,6 +18,7 @@ Each skill is in its own directory and contains a `SKILL.md` with instructions f
 
 | Skill | Focus |
 | --- | --- |
+| `general-learning` | Structured teaching of Hong Kong finance concepts |
 | `audit-checklist` | Audit planning and checklist development |
 | `automated-reconciliation` | Reconciliation workflows and exception handling |
 | `budget-forecast` | Budgeting, forecasting, and variance analysis |
